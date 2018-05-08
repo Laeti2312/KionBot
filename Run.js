@@ -36,7 +36,64 @@ bot.on('message', async function (message){
 		    
 	case "k!blast" : message.channel.send('How repetitive.');
             break;
-        
+	
+	case "kt!help" : message.channel.send({embed: {
+    color: 24422666,
+    author: {
+      name: client.user.username,
+      icon_url: client.user.avatarURL
+    },
+    title: "KionBot Help commands",
+		
+    description: "Type these commands to get some help on how to use KionBot",
+    fields: [{
+        name: "k!how are you",
+        value: "respond : How Foolish smth is"
+      },
+      {
+        name: "k!foolish",
+        value: "respond : rate the foolishness of smth"
+      },
+      {
+        name: "k!fuli k!beshte k!kion k!bunga k!ono",
+        value: "say a sentence of the characters with delay and a gif"
+      },
+      {
+        name: "pong",
+        value: "respond with ping"
+      },
+      {
+        name: "k!birthdaymac",
+        value: "wish a happy birthday to Mac Guy"
+      },
+      {
+        name: "k!say",
+        value: "make the bot talk"
+      },
+      {
+        name: "k!random lion king",
+        value: "say a random name from the Lion king and Lion guard"
+      },
+      {
+        name: "k!bothair",
+        value: "says Oh bothair."
+      },
+      {
+        name: "k!ballast",
+        value: "says Oh ballast."
+      },
+      {
+        name: "k!blast",
+        value: "says How repetitive."
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: client.user.avatarURL,
+      text: "© Example"
+    }
+  }
+});
         case "k!help" : message.channel.send('```1) k!how are you = respond : How Foolish smth is\n'+
 			'2) k!foolish = respond : rate the foolishness of smth\n'+
 			'3) k!fuli = respond with waiting time : Ugh, baboons; Seriously?; Nowhere to run that I cannot run faster; Huwezi\n'+
