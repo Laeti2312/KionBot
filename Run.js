@@ -38,7 +38,7 @@ bot.on('message', async function (message){
             break;
 	
 	case "k!help" : message.channel.send({embed: {
-			    color: 24422666,
+			    color: 3447003,
 			    author: {
 			      name: bot.user.username,
 			      icon_url: bot.user.avatarURL
