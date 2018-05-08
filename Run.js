@@ -96,7 +96,7 @@ bot.on('message', async function (message){
 		        message.channel.send(lionking[lionkingg]);
             break;
 		
-	case "search" : client.search('Lions !'),
+	case "search" : client.search('Lions !').then(message.channel.send(images.url));
 	    break;
             
         }
