@@ -162,7 +162,7 @@ bot.on('message', async function (message){
 	}
 	
       
-	if(message.content.toLowerCase() === 'hello') {
+	if(message.content.toLowerCase() === 'k!talk') {
 	    message.author.sendMessage("Hey there")
 	}
         if(message.content.toLowerCase().startsWith('k!say')) {
