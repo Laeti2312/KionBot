@@ -118,6 +118,10 @@ bot.on('message', async function (message){
 			
 });
 
+client.on('message', => {
+if(message.content.toLowerCase() === 'hello')
+	message.author.sendMessage("Hey there")
+});
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
