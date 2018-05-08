@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+var lionkingg;
+var lionking = ["Scar","Simba","Mufasa","Nala","Shenzi","Sarabi","Rafiki","Timon","Zazu","Ed","Shenzi clan","Banzai","Great Kings of the past","Pumbaa","Sarafina","Pride Landers","Simba Pride","Mole","Kovu","Kiara","Zira","Vitani","Nuka","Outsiders","Kion","Fuli","Askari","Bunga","Ono","Beshte","Uncle Max","Ma","Timon colony","Iron Joe","Army of Scar","Sumu","Janja","Ushari","Makucha","Kiburi","Reirei","Shupavu","Nduli","Dogo","Mzingo","The Zimwi","Makucha leap","Nne","Cheezi","Chungu","Njano","Goigoi","Dogo brothers","Tamka","Mapigano","Mpishi","Mwoga","Mzingo's parliament","Tano","Nyeusi","Uroho","Mwevi","Mwizi","Kopa","Mohatu","Lion Guard","Kopa","Jasiri","Makini","Furaha","Dhahabu","Mzaha","Mtoto","Hadari","Badili","Kifaru","Herman","Ona",];
+
+
 bot.login(process.env.TOKEN);
 
 bot.on('message', async function (message){
@@ -21,16 +25,30 @@ bot.on('message', async function (message){
         
         case "k!foolishm" : message.channel.send('MacGuy has 100% foolishness');
             break;
-        
-        case "k!help" : message.channel.send('1) k!how are you = respond : How Foolish smth is');
-                        message.channel.send('2) k!foolish = respond : rate the foolishness of smth');
-                        message.channel.send('3) k!fuli = respond with waiting time : Ugh, baboons; Seriously?; Nowhere to run that I cannot run faster; Huwezi');
-                        message.channel.send('4) pong = respond : ping');
-                        message.channel.send('5) k!birthdaymac = wish a happy birthday to Mac Guy');
-                        message.channel.send('6) k!beshte, k!kion, k!bunga, k!ono = say a sentence of the charactere and a gif');
-                        
+	
+	case "k!bothair" : message.channel.send('Oh bothair.');
             break;
-        case "k!kion" : await sleep(500 + random(500,0));
+		    
+	case "k!ballast" : message.channel.send('Oh ballast.');
+            break;
+		    
+	case "k!blast" : message.channel.send('How repetitive.');
+            break;
+        
+        case "k!help" : message.channel.send('```1) k!how are you = respond : How Foolish smth is\n'+
+			'2) k!foolish = respond : rate the foolishness of smth\n'+
+			'3) k!fuli = respond with waiting time : Ugh, baboons; Seriously?; Nowhere to run that I cannot run faster; Huwezi\n'+
+			'4) pong = respond : ping\n'+
+			'5) k!birthdaymac = wish a happy birthday to Mac Guy\n'+
+			'6) k!beshte, k!kion, k!bunga, k!ono = say a sentence of the charactere and a gif\n'+
+		    	'7) k!say = make the bot talk\n'+
+		    	'8) k!random lion king = say a random name from the Lion king and Lion guard\n'+
+		    	'9) k!bothair = says Oh bothair.\n'+
+		    	'10) k!ballast = says Oh ballast.\n'+
+		    	'11) k!blast = says How repetitive.```');
+            break;
+        
+	case "k!kion" : await sleep(500 + random(500,0));
                         message.channel.send('Hevi Kabesa');
                         await sleep(500 + random(500,0));                   
                         message.channel.send('Till the Pridelands end...');
@@ -39,6 +57,7 @@ bot.on('message', async function (message){
                         await sleep(500 + random(500,0));                    
                         message.channel.send('I dont want to end up like Scar.', {file: "https://cdn.discordapp.com/attachments/355274540248596480/356530551143792662/49dc73b2bf47bdacafc40f402b2781df7f4aead9_hq.gif"});
             break;
+		    
         case "k!bunga" : await sleep(500 + random(500,0));
                          message.channel.send('Zuka Zama');
                          await sleep(500 + random(500,0));
@@ -48,6 +67,7 @@ bot.on('message', async function (message){
                          await sleep(500 + random(500,0));
                          message.channel.send('Galleallegoes', {file: "https://cdn.discordapp.com/attachments/355274540248596480/356530469266915330/Bunga-hand.gif"});
             break;
+		    
         case "k!ono" :  await sleep(500 + random(500,0));
                         message.channel.send('Kinda common knolege really');
                         await sleep(500 + random(500,0));
@@ -69,6 +89,10 @@ bot.on('message', async function (message){
             
         case "k!birthdaymac" : message.channel.send('**HAPPY FOOLISH BIRTHDAY Mac Guy !!!!!!!**' , {file: "https://vignette2.wikia.nocookie.net/lionguard/images/5/5b/Fuli-splash.gif"});
             break;
+		    
+	case "k!random lion king" : lionkingg = Math.floor(Math.random() * (lionking.length - 0) + 0);  
+		        message.channel.send(lionking[lionkingg]);
+            break;
             
         }
         
@@ -83,6 +107,11 @@ bot.on('message', async function (message){
             var reason = message.content.substring(10, message.content.length);
             message.channel.send(  reason + ' has ' +  Math.floor(random(100,0)) + '% foolishness'); 
             
+	}
+	if(message.content.toLowerCase().startsWith('k!say')) {
+	    var reason = message.content.substring(5, message.content.length);
+	    message.delete(); 
+	    message.channel.send(reason);
 	}
       
        
