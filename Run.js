@@ -40,8 +40,8 @@ bot.on('message', async function (message){
 	case "kt!help" : message.channel.send({embed: {
 			    color: 3447003,
 			    author: {
-			      name: client.user.username,
-			      icon_url: client.user.avatarURL
+			      name: bot.user.username,
+			      icon_url: bot.user.avatarURL
 			    },
 			    title: "KionBot Help commands",
 
@@ -89,7 +89,7 @@ bot.on('message', async function (message){
 			    ],
 			    timestamp: new Date(),
 			    footer: {
-			      icon_url: client.user.avatarURL,
+			      icon_url: bot.user.avatarURL,
 			      text: "© Example"
 			    }
 			  }
