@@ -113,11 +113,7 @@ bot.on('message', async function (message){
             message.channel.send(  reason + ' has ' +  Math.floor(random(100,0)) + '% foolishness'); 
             
 	}
-	if(message.content.toLowerCase().startsWith('k!say')) {
-	    var reason = message.content.substring(5, message.content.length);
-	    message.delete(); 
-	    message.channel.send(reason);
-	}
+	
       
 	if(message.content.toLowerCase() === 'hello') {
 	    message.author.sendMessage("Hey there")
