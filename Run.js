@@ -37,8 +37,8 @@ bot.on('message', async function (message){
 	case "k!blast" : message.channel.send('How repetitive.');
             break;
 	
-	case "kt!help" : message.channel.send({embed: {
-			    color: 3447003,
+	case "k!help" : message.channel.send({embed: {
+			    color: 24422666,
 			    author: {
 			      name: bot.user.username,
 			      icon_url: bot.user.avatarURL
@@ -90,23 +90,12 @@ bot.on('message', async function (message){
 			    timestamp: new Date(),
 			    footer: {
 			      icon_url: bot.user.avatarURL,
-			      text: "© Example"
+			      text: "© KionBot"
 			    }
 			  }
 			});
 	    break;
-        case "k!help" : message.channel.send('```1) k!how are you = respond : How Foolish smth is\n'+
-			'2) k!foolish = respond : rate the foolishness of smth\n'+
-			'3) k!fuli = respond with waiting time : Ugh, baboons; Seriously?; Nowhere to run that I cannot run faster; Huwezi\n'+
-			'4) pong = respond : ping\n'+
-			'5) k!birthdaymac = wish a happy birthday to Mac Guy\n'+
-			'6) k!beshte, k!kion, k!bunga, k!ono = say a sentence of the charactere and a gif\n'+
-		    	'7) k!say = make the bot talk\n'+
-		    	'8) k!random lion king = say a random name from the Lion king and Lion guard\n'+
-		    	'9) k!bothair = says Oh bothair.\n'+
-		    	'10) k!ballast = says Oh ballast.\n'+
-		    	'11) k!blast = says How repetitive.```');
-            break;
+       
         
 	case "k!kion" : await sleep(500 + random(500,0));
                         message.channel.send('Hevi Kabesa');
