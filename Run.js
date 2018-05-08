@@ -118,7 +118,11 @@ bot.on('message', async function (message){
 	if(message.content.toLowerCase() === 'hello') {
 	    message.author.sendMessage("Hey there")
 	}
-       
+        if(message.content.toLowerCase().startsWith('k!say')) {
+	    var reason = message.content.substring(5, message.content.length);
+	    message.delete(); 
+	    message.channel.send(reason);
+	}
 			
 });
 
