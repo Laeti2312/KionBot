@@ -143,10 +143,6 @@ bot.on('message', async function (message){
 		        message.channel.send(lionking[lionkingg]);
             break;
 		
-	case "search" : client.search('Lions !').then(message.channel.send(images.url));
-	    break;
-            
-        }
         
 	if (message.content.toLowerCase().startsWith('k!how are you ')){
             
@@ -159,6 +155,12 @@ bot.on('message', async function (message){
             var reason = message.content.substring(10, message.content.length);
             message.channel.send(  reason + ' has ' +  Math.floor(random(100,0)) + '% foolishness'); 
             
+	}
+        if (message.content.toLowerCase().startsWith('search ')){
+            
+            var reason = message.content.substring(7, message.content.length);
+	    const images = await client.search(reason);
+	    message.channel.send(images[Math.floor(random(images.length,0))].url);
 	}
 	
       
