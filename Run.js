@@ -86,6 +86,10 @@ bot.on('message', async function (message){
 				name: "k!blast",
 				value: "says How repetitive."
 			      },
+			      {
+				name: "k!search smth",
+				value: "google images random search smth"
+			      },
 			    ],
 			    timestamp: new Date(),
 			    footer: {
@@ -156,9 +160,9 @@ bot.on('message', async function (message){
             message.channel.send(  reason + ' has ' +  Math.floor(random(100,0)) + '% foolishness'); 
             
 	}
-        if (message.content.toLowerCase().startsWith('search ')){
+        if (message.content.toLowerCase().startsWith('k!search ')){
             
-            var reason = message.content.substring(7, message.content.length);
+            var reason = message.content.substring(9, message.content.length);
 	    const images = await client.search(reason);
 	    message.channel.send(images[Math.floor(random(images.length,0))].url);
 	}
