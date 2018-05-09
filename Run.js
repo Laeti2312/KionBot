@@ -142,7 +142,7 @@ bot.on('message', async function (message){
 	case "k!random lion king" : lionkingg = Math.floor(Math.random() * (lionking.length - 0) + 0);  
 		        message.channel.send(lionking[lionkingg]);
             break;
-		
+        }
         
 	if (message.content.toLowerCase().startsWith('k!how are you ')){
             
